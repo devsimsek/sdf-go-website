@@ -1,0 +1,181 @@
+<!-- Main -->
+<main>
+    <!-- Welcome Hero -->
+    <div class="container my-5">
+        <div class="alert alert-danger visually-hidden" id="errors" role="alert">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-exclamation-circle-fill fs-1"></i>
+                <h1 class="alert-heading fw-bolder d-inline">&nbsp;<span
+                            id="error"></span></h1>
+            </div>
+            <hr>
+            <p class="mb-0 fs-5" id="message"></p>
+        </div>
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h1 class="display-4 fw-bold lh-1">SDF<sub>Go</sub></h1>
+                <p class="lead">Small framework with powerfull features for coffee and web lovers.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                    <a class="btn btn-success btn-lg px-4 me-md-2 fw-bold"
+                       href="https://github.com/devsimsek/sdf-go/archive/refs/heads/main.zip">Download</a>
+                    <a class="btn btn-outline-secondary btn-lg px-4" href="/docs">Docs</a>
+                </div>
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden">
+                <img class="rounded-lg-3" src="/assets/images/EfssKGNXsAAmGRa.png" alt="" width="360">
+            </div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="container px-4 py-5">
+        <h2 class="pb-2 border-bottom">Features</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="col d-flex align-items-start">
+                <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                    <i class="bi bi-shield"></i>
+                </div>
+                <div>
+                    <h2>Secure</h2>
+                    <p>
+                        This application is well tested for any security breach and exploits. <br>
+                        So far we've not noticed any bugs or leaks. <br>
+                        If you do let us know!
+                    </p>
+                    <a href="https://github.com/devsimsek/sdf-go/issues" class="btn btn-primary">
+                        Submit An Issue
+                    </a>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                    <i class="bi bi-speedometer2"></i>
+                </div>
+                <div>
+                    <h2>Fast</h2>
+                    <p>
+                        Sdf framework is known for its speed, size and security. <br>
+                        With go comes in it is so fast.
+                    </p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                    <i class="bi bi-box"></i>
+                </div>
+                <div>
+                    <h2>Small</h2>
+                    <p>
+                        It is compressed, easy to download and use. <br>
+                        Only core application requires 45kb.
+                    </p>
+                    <br>
+                    <br>
+                    <a href="https://github.com/devsimsek/sdf-go/archive/refs/heads/main.zip" class="btn btn-success">
+                        Download
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-5 mb-4 bg-dark text-white rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Thank's For Visiting Us</h1>
+            <p class="col-md-8 fs-4">
+                Sdf is under active development like this site. So if you find anything missing please contact us and we
+                will add.
+            </p>
+            <a class="btn btn-primary btn-lg" href="mailto:devsimsek@outlook.com">Contact</a>
+        </div>
+    </div>
+
+    <!-- Product Showcase -->
+    <!--<div class="container px-4 py-5">
+        <h2 class="pb-2 border-bottom">Product Showcase</h2>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                     style="background-image: url('unsplash-photo-1.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                     class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill"></use>
+                                </svg>
+                                <small>Earth</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#calendar3"></use>
+                                </svg>
+                                <small>3d</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                     style="background-image: url('unsplash-photo-2.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple
+                            lines</h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                     class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill"></use>
+                                </svg>
+                                <small>Pakistan</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#calendar3"></use>
+                                </svg>
+                                <small>4d</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                     style="background-image: url('unsplash-photo-3.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
+                                     class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#geo-fill"></use>
+                                </svg>
+                                <small>California</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em">
+                                    <use xlink:href="#calendar3"></use>
+                                </svg>
+                                <small>5d</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+</main>

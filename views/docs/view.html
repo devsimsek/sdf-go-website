@@ -1,0 +1,131 @@
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>
+    hljs.highlightAll()
+</script>
+<div class="p-5 mb-4 bg-dark text-white rounded-3">
+    <div class="container-fluid pt-5">
+        <h1 class="display-5 fw-bold">Configuration</h1>
+        <p class="col-md-12 fs-4">
+            With this documentation you will learn how to configure your application and how to create hello world
+            example with sdf.
+        </p>
+    </div>
+    <div class="container-fluid col-md-12 fs-4 doc-inner">
+        <div id="contents" class="fs-5 mt-2">
+            <h2>
+                <a href="#contents" class="text-white">Contents</a>
+            </h2>
+            <hr>
+            <ul>
+                <li>
+                    <a href="#configuration">Configuring Application</a>
+                </li>
+                <li>
+                    <a href="#hello-world-example">Creating Hello World Example</a>
+                </li>
+            </ul>
+        </div>
+        <div id="configuration" class="fs-5 mt-2">
+            <h2>
+                <a href="#configuration" class="text-white">Configuring Application</a>
+            </h2>
+            <hr>
+            <span class="fst-italic">Please referrer to <a
+                        href="/d/getting-started/prerequisites">"Prerequisites"</a> and the <a
+                        href="/d/getting-started/installation">"Installation"</a> sections of this documentary.</span>
+            <p>
+                When you finished other sections of getting started documentation and installed source of sdf, you can
+                start building your software. <br>
+                But you still need to configure your application. This documentary will help you how to configure it.
+            </p>
+            <ol>
+                <li>
+                    Open sdf source directory with your chosen ide.
+                </li>
+                <li>
+                    Locate to sdf.go file.
+                </li>
+                <li>
+                    If your application has dynamic content and requires authentication you need to create .envrc (or
+                    .env) file on the root directory of sdf.go file.
+                </li>
+                <ol>
+                    <li>
+                        Open the .env file that you've just created.
+                    </li>
+                    <li>
+                        Add <code>SESSION_KEY="32bytesofsessionkey"</code> to .env file.
+                    </li>
+                    <li>
+                        Locate sdf.go
+                    </li>
+                    <li>
+                        Find <code>err = godotenv.Load(filepath.Join(dir, ".envrc"))</code> line and change it to your
+                        .env file.
+                    </li>
+                </ol>
+                <li>
+                    If you've static files uncomment 19. line and change assets directory to your static directory. <br>
+                    <span class="fst-italic">Or simply add <code>core.RegisterStaticHandle("/localdir/", "publicdir")</code> to sdf.go file.</span>
+                </li>
+                <li>
+                    And you're complete!
+                </li>
+            </ol>
+        </div>
+        <div id="hello-world-example" class="fs-5 mt-2">
+            <h2>
+                <a href="#hello-world-example" class="text-white">Creating Hello World Example</a>
+            </h2>
+            <hr>
+            <p>
+                If you've finished configuring you're ready to create your hello world application!
+            </p>
+            <ol>
+                <li>
+                    Open sdf source directory with your chosen ide.
+                </li>
+                <li>
+                    Locate to handlers directory.
+                </li>
+                <li>
+                    Create a new .go file of your chosen name (this example uses hi.go)
+                </li>
+                <li>
+                    Open hi.go and add the boilerplate code bellow;
+                </li>
+                <pre>
+<code class="language-go bg-dark" style="color: rgb(214, 51, 132);">
+package handlers
+import (
+    "SDF/core"
+    "fmt"
+    "net/http"
+)
+
+func init() {
+    core.RegisterHandle("/", exampleHandle, "GET")
+}
+
+func exampleHandle(writer http.ResponseWriter, request *http.Request) {
+    _, err := fmt.Fprintf(writer, "Hello World!")
+    core.CheckErrorNotPanic(err)
+}
+</code>
+                </pre>
+                <li>
+                    Open your terminal and run <code>$ go run sdf.go</code>
+                </li>
+                <li>
+                    Locate to http://localhost:8000 in your favorite browser
+                </li>
+                <li>
+                    You're now ready to create your own application.
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+</main>

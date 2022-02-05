@@ -1,0 +1,66 @@
+<!-- Main -->
+<main class="docs">
+    <aside class="bd-aside sticky-top py-3 px-3">
+        <h2 class="h6 pt-4 pb-3 mb-4 border-bottom link" onclick="redirect('/docs')">Docs</h2>
+        <nav class="small">
+            <ul class="list-unstyled">
+                <li class="my-2">
+                    <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse"
+                            aria-expanded="{{if eq .Slug "getting_started"}}true{{else}}false{{end}}"
+                            data-bs-target="#docs_getting_started_sb"
+                            aria-controls="docs_getting_started_sb">
+                        Getting Started
+                    </button>
+                    <ul class="list-unstyled ps-3 collapse {{if eq .Slug "getting_started"}}show{{end}}"
+                        id="docs_getting_started_sb">
+                        <li>
+                            <a class="d-inline-flex align-items-center rounded {{if eq .SubSlug "prerequisites"}}active{{end}}"
+                               href="/d/getting-started/prerequisites">Prerequisites</a>
+                        </li>
+                        <li>
+                            <a class="d-inline-flex align-items-center rounded {{if eq .SubSlug "installation"}}active{{end}}"
+                               href="/d/getting-started/installation">Installation</a>
+                        </li>
+                        <li>
+                            <a class="d-inline-flex align-items-center rounded {{if eq .SubSlug "configuration"}}active{{end}}"
+                               href="/d/getting-started/configuration">Configuration</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="my-2">
+                    <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse"
+                            aria-expanded="false" data-bs-target="#docs_core_sb" aria-controls="docs_core_sb">
+                        Core
+                    </button>
+                    <ul class="list-unstyled ps-3 collapse" id="docs_core_sb">
+                        <li><a class="d-inline-flex align-items-center rounded" href="/d/core/libraries">Libraries</a>
+                        </li>
+                        <li><a class="d-inline-flex align-items-center rounded" href="/d/core/http">Http</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded" href="/d/core/types">Types</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded" href="/d/core/utils">Utils</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded" href="/d/core/view">View</a></li>
+                    </ul>
+                </li>
+                <li class="my-2">
+                    <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse"
+                            aria-expanded="false" data-bs-target="#docs_handlers_sb" aria-controls="docs_handlers_sb">
+                        Handlers
+                    </button>
+                    <ul class="list-unstyled ps-3 collapse" id="docs_handlers_sb">
+                        <li><a class="d-inline-flex align-items-center rounded" href="/d/handlers/routing">Routing
+                                Schema</a></li>
+                    </ul>
+                </li>
+                <li class="my-2">
+                    <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse"
+                            aria-expanded="false" data-bs-target="#docs_views_sb" aria-controls="docs_views_sb">
+                        Views
+                    </button>
+                    <ul class="list-unstyled ps-3 collapse" id="docs_views_sb">
+                        <li><a class="d-inline-flex align-items-center rounded" href="/d/views/templates">Templates</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
