@@ -86,7 +86,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Devsimsek - [@devsimsek](https://linkedin.com/in/devsimsek) - devsimsek@outlook.com
 
-Project Link: [https://github.com/devsimsek/sdf-go-website](https://github.com/devsimsek/sdf-go-website)
+Project Link: [https://sdfgo.smsk.me](https://sdfgo.smsk.me)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
