@@ -18,9 +18,10 @@
                     <a class="nav-link {{if eq .Slug "examples"}}active{{end}}" aria-current="page" href="/examples">Examples</a>
                 </li>
             </ul>
-            <form class="d-flex" method="get" action="/">
-                <input type="text" name="error" value="0xnr" hidden>
-                <input class="form-control me-2" type="search" placeholder="Search At Docs" aria-label="Search">
+            <form class="d-flex" method="get" action="/search">
+                <!--<input type="text" name="error" value="0xnr" hidden>-->
+                <input class="form-control me-2" type="search" placeholder="Search At Docs" aria-label="Search"
+                       name="sq">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
