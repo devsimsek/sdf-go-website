@@ -19,7 +19,7 @@ func searchHandle(writer http.ResponseWriter, request *http.Request) {
 	// Search
 	keys, ok := request.URL.Query()["sq"]
 	if !ok || len(keys[0]) < 1 {
-		http.Redirect(writer, request, "/?error=0x", http.StatusSeeOther)
+		http.Redirect(writer, request, "/?error=0xnsq", http.StatusSeeOther)
 		return
 	}
 

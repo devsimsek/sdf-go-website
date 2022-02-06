@@ -14,5 +14,10 @@ function errorAlert(code) {
                 "error": "Not Ready",
                 "message": "Functionality is not yet ready. Please be avare that sdf website is under development.",
             };
+        case "0xnsq":
+            return {
+                "error": "Search Parameter Does Not Exists",
+                "message": "Search parameter does not exists on the query.",
+            };
     }
 }
