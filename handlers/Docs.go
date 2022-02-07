@@ -10,7 +10,7 @@ import (
 func init() {
 	core.RegisterStandaloneHandle("/d/", docHandler)
 	core.RegisterHandle("/docs", docHome, "GET")
-	// For Testing :D core.RegisterHandle("/testHandle", testHandle, "GET")
+	core.RegisterHandle("/testHandle", testHandle, "GET")
 	docs.Open("docs.edb", "databases")
 }
 
@@ -47,8 +47,6 @@ func docHandler(writer http.ResponseWriter, request *http.Request) {
 	}
 }
 
-/**
-For Testing;
 func testHandle(w http.ResponseWriter, r *http.Request) {
 	_, err := fmt.Fprintf(w, core.LoadView("views/partials/head.html", core.View{Page: "Docs | Home"}))
 	_, err = fmt.Fprintf(w, core.LoadView("views/partials/navigation.html", core.View{Slug: "docs"}))
@@ -57,4 +55,3 @@ func testHandle(w http.ResponseWriter, r *http.Request) {
 	_, err = fmt.Fprintf(w, core.LoadView("views/partials/footer.html"))
 	core.CheckErrorNotPanic(err)
 }
-*/

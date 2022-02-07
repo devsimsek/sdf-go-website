@@ -1,11 +1,163 @@
 <div class="p-5 mb-4 bg-dark text-white rounded-3">
     <div class="container-fluid pt-5">
-        <h1 class="display-5 fw-bold">Search Query</h1>
+        <h1 class="display-5 fw-bold">Core</h1>
+        <p class="col-md-12 fs-4">
+            All libraries and features that sdf core has built-in.
+        </p>
     </div>
     <div class="container-fluid col-md-12 fs-4 doc-inner">
-        <div id="searchResultList" class="fs-5 mt-2">
-            <a href="">Example Result</a>
+        <div id="contents" class="fs-5 mt-2">
+            <h2>
+                <a href="#contents" class="text-white">Contents</a>
+            </h2>
             <hr>
+            <ul>
+                <li>
+                    <a href="#libraries">Libraries</a>
+                </li>
+                <li>
+                    <a href="#http">Http</a>
+                </li>
+                <li>
+                    <a href="#types">Types</a>
+                </li>
+                <li>
+                    <a href="#utils">Utils</a>
+                </li>
+                <li>
+                    <a href="#view">View</a>
+                </li>
+            </ul>
+        </div>
+        <div id="libraries" class="fs-5 mt-2">
+            <h2>
+                <a href="#libraries" class="text-white">Libraries</a>
+            </h2>
+            <hr>
+            <p>
+                Sdf has built in libraries for your application such as Database libraries, I/O Managers, Security and
+                more... <br>
+                So far we've developed;
+            </p>
+            <ul>
+                <li><a href="#lib_database">Database</a> (All Done.)</li>
+            </ul>
+            <p>
+                And more will come soon.
+            </p>
+            <div id="lib_database" class="fs-5 mt-2 ms-4 me-4">
+                <h2>
+                    <a href="#lib_database" class="text-white">Database Library |
+                        core/libraries/database/Database.go</a>
+                </h2>
+                <hr>
+                <p>
+                    Database is a flat file based database library for sdf. <br>
+                    It has built-in encoding features for security and if you don't allow yourself it is not accessible
+                    in web.
+                </p>
+                <span class="fst-italic">Did you know that this documentary is fetched from docs.edb in SDF-Go Website?</span>
+                <div class="m-2">
+                    <h3>Methods</h3>
+                    <hr>
+                    <div id="lib_db_m_open">
+                        <h4><a href="#lib_db_m_open">database.Open(fileName string, path ...string) | Boolean | Line:
+                                20</a></h4>
+                        <p>
+                            Opens database in local storage. <br>
+                            fileName is required for this method. <br>
+                            If no path given database library will search database file in root directory.
+                        </p>
+                    </div>
+                    <div id="lib_db_m_save">
+                        <h4><a href="#lib_db_m_save">database.Save() | Boolean | Line: 48</a></h4>
+                        <p>
+                            Save temporary database data.
+                        </p>
+                    </div>
+                    <div id="lib_db_m_set">
+                        <h4><a href="#lib_db_m_set">database.Set(key string, value interface{}) | Line: 57</a></h4>
+                        <p>
+                            Set data to database. <br>
+                            key is required for this method. <br>
+                            value is required for this method.
+                        </p>
+                    </div>
+                    <div id="lib_db_m_get">
+                        <h4><a href="#lib_db_m_get">database.Get(key string) | interface{} | Line: 61</a></h4>
+                        <p>
+                            Fetches data from database. <br>
+                            key is required for this method. <br>
+                            return's key's value or interface{}
+                        </p>
+                    </div>
+                    <div id="lib_db_m_update">
+                        <h4><a href="#lib_db_m_update">database.Update(key string, value interface{}) | Line: 65</a>
+                        </h4>
+                        <p>
+                            Updates data from database. <br>
+                            <span class="fst-italic">Did you know that this method is same with set method :D</span>
+                            <br>
+                            key is required for this method. <br>
+                            value is required for this method. <br>
+                            return's key's value or interface{}
+                        </p>
+                    </div>
+                    <div id="lib_db_m_delete">
+                        <h4><a href="#lib_db_m_delete">database.Delete(key string) | Line: 69</a>
+                        </h4>
+                        <p>
+                            Deletes a key from database. <br>
+                            key is required for this method.
+                        </p>
+                    </div>
+                    <div id="lib_db_m_create">
+                        <h4><a href="#lib_db_m_create">database.Create(fileName string, path ...string) | *os.File,
+                                error | Line: 73</a>
+                        </h4>
+                        <p>
+                            Creates a database. <br>
+                            fileName is required for this method. <br>
+                            If no path given database library will create database file in root directory.
+                        </p>
+                    </div>
+                    <div id="lib_db_m_read">
+                        <h4><a href="#lib_db_m_read">database.Read() | map[string]interface{} | Line: 94</a></h4>
+                        <p>
+                            Read the whole content of database. <br>
+                            Returns key value type of map.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="http" class="fs-5 mt-2">
+            <h2>
+                <a href="#http" class="text-white">Http</a>
+            </h2>
+            <hr>
+            <span class="fst-italic">Soon...</span>
+        </div>
+        <div id="types" class="fs-5 mt-2">
+            <h2>
+                <a href="#types" class="text-white">Types</a>
+            </h2>
+            <hr>
+            <span class="fst-italic">Soon...</span>
+        </div>
+        <div id="utils" class="fs-5 mt-2">
+            <h2>
+                <a href="#utils" class="text-white">Utils</a>
+            </h2>
+            <hr>
+            <span class="fst-italic">Soon...</span>
+        </div>
+        <div id="view" class="fs-5 mt-2">
+            <h2>
+                <a href="#view" class="text-white">View</a>
+            </h2>
+            <hr>
+            <span class="fst-italic">Soon...</span>
         </div>
     </div>
 </div>

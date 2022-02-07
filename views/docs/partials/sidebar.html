@@ -28,37 +28,26 @@
                     </ul>
                 </li>
                 <li class="my-2">
-                    <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse"
+                    <button class="btn d-inline-flex align-items-center collapsed"
+                            data-bs-toggle="collapse"
                             aria-expanded="false" data-bs-target="#docs_core_sb" aria-controls="docs_core_sb">
                         Core
                     </button>
-                    <ul class="list-unstyled ps-3 collapse" id="docs_core_sb">
-                        <li><a class="d-inline-flex align-items-center rounded" href="/d/core/libraries">Libraries</a>
+                    <ul class="list-unstyled ps-3 collapse {{if eq .Slug "core"}}show{{end}}" id="docs_core_sb">
+                        <li><a class="d-inline-flex align-items-center rounded {{if eq .SubSlug "core"}}active{{end}}"
+                               href="/d/core">Home</a>
                         </li>
-                        <li><a class="d-inline-flex align-items-center rounded" href="/d/core/http">Http</a></li>
-                        <li><a class="d-inline-flex align-items-center rounded" href="/d/core/types">Types</a></li>
-                        <li><a class="d-inline-flex align-items-center rounded" href="/d/core/utils">Utils</a></li>
-                        <li><a class="d-inline-flex align-items-center rounded" href="/d/core/view">View</a></li>
-                    </ul>
-                </li>
-                <li class="my-2">
-                    <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse"
-                            aria-expanded="false" data-bs-target="#docs_handlers_sb" aria-controls="docs_handlers_sb">
-                        Handlers
-                    </button>
-                    <ul class="list-unstyled ps-3 collapse" id="docs_handlers_sb">
-                        <li><a class="d-inline-flex align-items-center rounded" href="/d/handlers/routing">Routing
-                                Schema</a></li>
-                    </ul>
-                </li>
-                <li class="my-2">
-                    <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse"
-                            aria-expanded="false" data-bs-target="#docs_views_sb" aria-controls="docs_views_sb">
-                        Views
-                    </button>
-                    <ul class="list-unstyled ps-3 collapse" id="docs_views_sb">
-                        <li><a class="d-inline-flex align-items-center rounded" href="/d/views/templates">Templates</a>
+                        <li><a class="d-inline-flex align-items-center rounded {{if eq .SubSlug "core"}}active{{end}}"
+                               href="/d/core#libraries">Libraries</a>
                         </li>
+                        <li><a class="d-inline-flex align-items-center rounded {{if eq .SubSlug "core"}}active{{end}}"
+                               href="/d/core#http">Http</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded {{if eq .SubSlug "core"}}active{{end}}"
+                               href="/d/core#types">Types</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded {{if eq .SubSlug "core"}}active{{end}}"
+                               href="/d/core#utils">Utils</a></li>
+                        <li><a class="d-inline-flex align-items-center rounded {{if eq .SubSlug "core"}}active{{end}}"
+                               href="/d/core#view">View</a></li>
                     </ul>
                 </li>
             </ul>
